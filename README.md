@@ -13,6 +13,7 @@
 
 - `JQUANTS_EMAIL`: J-Quants API にアクセスするためのメールアドレス（リフレッシュトークンを取得する時に使うよ）。📧
 - `JQUANTS_PASSWORD`: J-Quants API にアクセスするためのパスワードだよ。🔒
+- `FIRESTORE_DB_NAME`:（オプション）`.../store`というURLのAPIルートでFireStoreにデータを保存する場合使用するデータベースの名前だよ。
 
 ローカルで実行する場合は、`.env.sample`ファイルを参考にして、`.env`ファイルを作ってね！📄
 
@@ -119,6 +120,10 @@ curl -H "Authorization: Bearer $(gcloud auth print-identity-token)" \
   このエンドポイントは内部で `/token/auth_refresh` と `/token/auth_user` を呼び出しているから、直接アクセスするだけで大丈夫だよ！🔄✨
 - **HTTP メソッド**: GET
 - **レスポンス**: 上場銘柄情報を含む JSON オブジェクト。💹
+
+### `/listed/info/store`（RESTにするか考え中だよ）
+- **説明**: 上場銘柄の一覧情報をFireStoreに保存するよ！📥  
+- **HTTP メソッド**: GET
 
 ## 注意事項 ⚠️🚨
 
